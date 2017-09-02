@@ -1,18 +1,25 @@
 {
   "name": "alexander",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "description": "cryptobot",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon app.js",
+    "test": "nodemon test/test.js"
   },
   "author": "alexander",
   "license": "ISC",
   "dependencies": {
+    "async-await-mongoclient-es6-promisify": "^1.0.1",
+    "dotenv": "^4.0.0",
+    "es6-promisify": "^5.0.0",
     "express": "^4.15.4",
     "mongodb": "^2.2.31",
     "request": "^2.81.0",
     "talib": "^1.0.3",
     "tulind": "^0.8.7"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
   }
 }

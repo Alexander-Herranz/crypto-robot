@@ -11,21 +11,18 @@ class BittrexAPI {
    this._getmarketsummaries = 'getmarketsummaries'
    this._getorderbook = 'getorderbook'
    this._getmarkethistory = 'getmarkethistory'
-
   }
 
   doRequest(url) {
      return new Promise(function (resolve, reject) {
        request(url, function (error, res, body) {
-
          if (!error && res.statusCode == 200) {
            //console.log(body)
            resolve(body);
          } else {
            reject(error);
          }
-
-       });
+       })
      }).catch((error) => {
       console.log(url + '--> Request error:');
       console.log(error)
